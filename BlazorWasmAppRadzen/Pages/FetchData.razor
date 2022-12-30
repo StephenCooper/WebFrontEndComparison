@@ -4,8 +4,10 @@
 
 <PageTitle>Weather forecast</PageTitle>
 
-<RadzenDataGrid forecasts AllowGrouping="true" PageSize=@WeatherForecast.Data.Length AllowVirtualization=@true
-                Data="@forecasts" TItem="WeatherForecast" ColumnWidth="160px" HideGroupedColumn="true" Vi>
+<RadzenDataGrid AllowGrouping="true" AllowVirtualization=@true
+    Style="height: 800px; width: 100%"
+    Count="@WeatherForecast.Data.Length"
+    Data="@forecasts" TItem="WeatherForecast" ColumnWidth="160px" HideGroupedColumn="true" GroupRowRender=@OnGroupRowRender GroupRowCollapse="OnGroupRowCollapse" GroupRowExpand="OnGroupRowExpand">
     <Columns>
         <RadzenDataGridColumn TItem="WeatherForecast" Property=@nameof(WeatherForecast.LastRendered) Title="Last rendered" />
 		<RadzenDataGridColumn TItem="WeatherForecast" Property=@nameof(WeatherForecast.Date) Title="Date" />
