@@ -5,12 +5,12 @@
 
 <PageTitle>Weather forecast</PageTitle>
 
-<DxDataGrid Data=@forecasts ShowGroupPanel=@true PageSize=@WeatherForecast.Data.Length>
-	<Columns>
-		<DxDataGridColumn Field=@nameof(WeatherForecast.LastRendered)></DxDataGridColumn>
-		<DxDataGridColumn Field=@nameof(WeatherForecast.Date)></DxDataGridColumn>
-		<DxDataGridColumn Field=@nameof(WeatherForecast.TemperatureC)></DxDataGridColumn>
-		<DxDataGridColumn Field=@nameof(WeatherForecast.TemperatureF)></DxDataGridColumn>
-		<DxDataGridColumn Field=@nameof(WeatherForecast.Summary)></DxDataGridColumn>
-	</Columns>
-</DxDataGrid>
+<DxGrid Data=@forecasts ShowGroupPanel=@true PageSize=@WeatherForecast.Data.Length>
+    <Columns>
+        <DxGridDataColumn FieldName=@nameof(WeatherForecast.LastRendered)></DxGridDataColumn>
+        <DxGridDataColumn FieldName=@nameof(WeatherForecast.Date)></DxGridDataColumn>
+        <DxGridDataColumn FieldName=@nameof(WeatherForecast.TemperatureC)></DxGridDataColumn>
+        <DxGridDataColumn FieldName=@nameof(WeatherForecast.TemperatureF)></DxGridDataColumn>
+        <DxGridDataColumn FieldName=@nameof(WeatherForecast.Summary)></DxGridDataColumn>
+    </Columns>
+</DxGrid>
